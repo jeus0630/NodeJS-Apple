@@ -40,6 +40,7 @@ app.use('/login',loginRoute);
 app.use('/mypage',mypageRoute);
 app.use('/search',searchRoute);
 app.use('/register',registerRoute);
+app.use('/upload',require('./routes/upload'));
 
 app.use((req,res)=>{
     res.send('NOT FOUND');
