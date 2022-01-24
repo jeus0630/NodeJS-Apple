@@ -22,14 +22,14 @@
 
 <ul class="list-group">
     <% for(let i =0; i < posts.length; i ++ ) {%>
-    <li class="list-group-item">
-        <a href='/detail/<%= posts[i]._id%>'>
-            <h4>할일 목록 : <%= posts[i].할일%></h4>
-            <p>할일 마감날짜 : <%= posts[i].날짜%></p>
-            <button class="hello" data-id=<%=posts[i]._id%>>삭제</button>
-            <a class="btn-primary btn" href="/edit/<%= posts[i]._id%>">수정</a>
-        </a>
-    </li>
+        <li class="list-group-item">
+            <a href='/detail/<%= posts[i]._id%>'>
+                <h4>할일 목록 : <%= posts[i].할일%></h4>
+                <p>할일 마감날짜 : <%= posts[i].날짜%></p>
+                <button class="hello" data-id=<%=posts[i]._id%>>삭제</button>
+                <a class="btn-primary btn" href="/edit/<%= posts[i]._id%>">수정</a>
+            </a>
+        </li>
     <% }%>
 </ul>
 

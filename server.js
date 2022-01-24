@@ -8,6 +8,11 @@ const listRoute = require('./routes/list');
 const homeRoute = require('./routes/home');
 const detailRoute = require('./routes/detail');
 const editRoute = require('./routes/edit');
+const loginRoute = require('./routes/login');
+const mypageRoute = require('./routes/mypage');
+const searchRoute = require('./routes/search');
+const registerRoute = require('./routes/register');
+
 const db = require('./config/db');
 const methodOverride = require('method-override');
 const passport = require('passport');
@@ -31,6 +36,10 @@ app.use('/list',listRoute);
 app.use('/',homeRoute);
 app.use('/detail',detailRoute);
 app.use('/edit',editRoute);
+app.use('/login',loginRoute);
+app.use('/mypage',mypageRoute);
+app.use('/search',searchRoute);
+app.use('/register',registerRoute);
 
 app.use((req,res)=>{
     res.send('NOT FOUND');
