@@ -41,6 +41,8 @@ app.use('/mypage',mypageRoute);
 app.use('/search',searchRoute);
 app.use('/register',registerRoute);
 app.use('/upload',require('./routes/upload'));
+app.use('/chat',require('./routes/chat'));
+app.use('/message',require('./routes/message'));
 
 app.use((req,res)=>{
     res.send('NOT FOUND');

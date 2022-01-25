@@ -28,6 +28,11 @@
             <p>할일 마감날짜 : <%= posts[i].날짜%></p>
             <button class="hello" data-id=<%=posts[i]._id%>>삭제</button>
             <a class="btn-primary btn" href="/edit/<%= posts[i]._id%>">수정</a>
+            <form action="/chat" method="POST">
+                <input type="text" hidden name="타이틀" value="<%= posts[i].할일%>">
+                <input type="text" hidden name="아이디" value="<%= posts[i].작성자%>">
+                <button type="submit" class="btn-secondary btn" href="/chat/<%= posts[i]._id%>">채팅</a>
+            </form>
         </a>
     </li>
     <% }%>
